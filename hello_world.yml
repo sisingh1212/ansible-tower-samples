@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: localhost
-  #vars:
-    #slack_channel: '{{ channel  }}'
+  vars:
+    channel: '{{channel}}'
     #slack_token: '{{ token }}'
 
   tasks:
@@ -10,10 +10,6 @@
         msg: "Hello World!"
     - name: Print custom details
       debug:
-        msg: "{{ item }}"
-      loop:
-        - 1
-        - 2
-        #- '{{ slack_channel  }}'
-        #- '{{ slack_token }}'
+        msg: "{{channel}}"
+      
 
