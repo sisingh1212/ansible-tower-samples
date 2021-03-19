@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  hosts: all
+  hosts: localhost
   vars:
     slack_channel: '{{ channel  }}'
     slack_token: '{{ token }}'
