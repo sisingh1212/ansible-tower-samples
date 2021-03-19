@@ -8,10 +8,8 @@
         msg: "Hello World!"
     - name: Print custom details
       debug:
-        msg: "{{ sid }}"
+        msg: "{{ item }}"
         loop:
           - '{{ slack_channel  }}'
           - '{{ slack_token }}'
-        loop_control:
-          loop_vars: sid
 
