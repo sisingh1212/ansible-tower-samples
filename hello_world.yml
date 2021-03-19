@@ -10,8 +10,8 @@
       debug:
         msg: "{{ sid }}"
         loop:
-          - slack_channel: '{{ slack_channel  }}'
-          - slack_token: '{{ slack_token }}'
+          - '{{ slack_channel  }}'
+          - '{{ slack_token }}'
         loop_control:
           loop_vars: sid
 
