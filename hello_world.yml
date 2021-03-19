@@ -12,6 +12,8 @@
       debug:
         msg: "{{ item }}"
       loop:
-        - '{{ slack_channel  }}'
-        - '{{ slack_token }}'
+        - 1
+        - 2
+        #- '{{ slack_channel  }}'
+        #- '{{ slack_token }}'
 
