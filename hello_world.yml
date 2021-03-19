@@ -9,7 +9,7 @@
     - name: Print custom details
       debug:
         msg: "{{ item }}"
-        loop:
-          - '{{ slack_channel  }}'
-          - '{{ slack_token }}'
+      loop:
+        - '{{ slack_channel  }}'
+        - '{{ slack_token }}'
 
