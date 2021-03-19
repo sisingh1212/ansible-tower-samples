@@ -1,8 +1,8 @@
 - name: Hello World Sample
   hosts: localhost
-  vars:
-    slack_channel: '{{ channel  }}'
-    slack_token: '{{ token }}'
+  #vars:
+    #slack_channel: '{{ channel  }}'
+    #slack_token: '{{ token }}'
 
   tasks:
     - name: Hello Message
