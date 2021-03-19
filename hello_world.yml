@@ -1,10 +1,17 @@
 - name: Hello World Sample
   hosts: all
+  vars:
+
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
     - name: Print custom details
       debug:
-        msg: slack_channel: '{{ slack_channel  }}' , slack_token: '{{ slack_token }}'
+        msg: "{{ sid }}"
+        loop:
+          - slack_channel: '{{ slack_channel  }}'
+          - slack_token: '{{ slack_token }}'
+        loop_control:
+          loop_vars: sid
 
