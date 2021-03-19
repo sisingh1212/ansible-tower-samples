@@ -1,6 +1,8 @@
 - name: Hello World Sample
   hosts: all
   vars:
+    - slack_channel='{{ slack_channel  }}'
+    - slack_token='{{ slack_token }}'
 
   tasks:
     - name: Hello Message
