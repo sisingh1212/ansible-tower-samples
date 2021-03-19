@@ -2,7 +2,7 @@
   hosts: localhost
   vars:
     channel: '{{channel}}'
-    #slack_token: '{{ token }}'
+    slack_token: '{{ token }}'
 
   tasks:
     - name: Hello Message
@@ -10,6 +10,9 @@
         msg: "Hello World!"
     - name: Print custom details
       debug:
-        msg: "{{channel}}"
+        msg: "{{item}}"
+      loop:
+        - '{{channel}}'
+        - '{{ token }}'
       
 
